@@ -22,7 +22,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@dreamworld/pwa-helpers": "^1.17.2"
+    "@dreamworld/pwa-helpers": "^1.17.2",
+    "isomorphic-dompurify": "^1.8.0",
+    "marked": "^8.0.0"
   },
   "devDependencies": {
     "@open-wc/building-rollup": "^3.0.2",

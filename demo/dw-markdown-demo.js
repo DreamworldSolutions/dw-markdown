@@ -11,7 +11,7 @@ export class DwMarkdownDemo extends LitElement {
   ];
 
   render() {
-    return html`<dw-markdown></dw-markdown>`;
+    return html`<dw-markdown .value="${"# Hello World"}"></dw-markdown>`;
   }
 }
 customElements.define('dw-markdown-demo', DwMarkdownDemo);
