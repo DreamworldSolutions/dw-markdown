@@ -3,7 +3,8 @@
   "version": "0.0.0-development",
   "main": "dw-markdown.js",
   "scripts": {
-    "start": "web-dev-server"
+    "start": "web-dev-server",
+    "build": "tsc && rm -rf src/ && rm -rf demo/"
   },
   "repository": {
     "type": "git",
