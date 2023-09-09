@@ -1,6 +1,7 @@
 import rollupCommonjs from '@rollup/plugin-commonjs';
 import { fromRollup } from '@web/dev-server-rollup';
 import rollupReplace from '@rollup/plugin-replace';
+import { esbuildPlugin } from "@web/dev-server-esbuild";
 
 const replace = fromRollup(rollupReplace);
 const commonjs = fromRollup(rollupCommonjs);
@@ -13,9 +14,12 @@ export default {
   plugins: [
     replace({
       preventAssignment: true,
-      include: ['dw-markdown.js'],
+      include: ['src/**/*.ts'],
       'isomorphic-dompurify': 'dompurify'
     }),
-    commonjs()
+    commonjs(),
+    esbuildPlugin({
+      ts: true,
+    }),
   ]
 };
